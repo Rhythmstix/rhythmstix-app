@@ -15,6 +15,7 @@ const myCapacitorApp = createCapacitorElectronApp({
     windowOptions: {
       icon:"./assets/appIcon.png",
       webPreferences: {
+        webSecurity: false,
         nodeIntegration: true,
         enableRemoteModule: true,
       },
@@ -22,7 +23,7 @@ const myCapacitorApp = createCapacitorElectronApp({
   },
 });
 app.whenReady().then(() => {
-  // myCapacitorApp.getMainWindow().setMenuBarVisibility(false)
+  myCapacitorApp.getMainWindow().setMenuBarVisibility(false)
   protocol.registerFileProtocol("file", (request, callback) => {
     const pathname = decodeURI(request.url.replace("file:///", ""));
     callback(pathname);
