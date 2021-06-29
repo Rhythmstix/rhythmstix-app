@@ -1,0 +1,14 @@
+{
+  "appId": "uk.co.rhythmstix.app",
+  "appName": "rhythmstix",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "linuxAndroidStudioPath": "/home/mb/Apps/android/android-studio/bin/studio.sh",
+  "cordova": {}
+}
